@@ -1,8 +1,6 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 import layout from '../templates/components/time-input';
-
-const { service } = Ember.inject;
-const { Component } = Ember;
 
 export default Component.extend({
   layout,
