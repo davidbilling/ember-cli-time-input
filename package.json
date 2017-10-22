@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-time-input",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Edit time on date or arrays of dates in Ember",
   "keywords": [
     "ember-addon",
