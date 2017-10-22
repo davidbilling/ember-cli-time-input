@@ -10,8 +10,8 @@ export default Component.extend({
   actions: {
     changeTime(time){
       const parsed = this.get('moment').moment(time, 'HH:mm');
-      const oldDate = this.get('currentDate');
-      
+      const oldDate = this.get('moment').moment(this.get('currentDate'));
+            
       var newDate = oldDate ? oldDate.clone() : this.get('moment').moment();
       newDate.hours(parsed.hours());
       newDate.minutes(parsed.minutes());
