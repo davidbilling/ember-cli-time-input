@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import moment from 'moment';
-import { run } from '@ember/runloop';
+//import moment from 'moment';
+//import { run } from '@ember/runloop';
 
 moduleForComponent('time-input', 'Integration | Component | time input', {
   integration: true
