@@ -19,7 +19,7 @@ export default Component.extend({
       let moments = this.get('arrayDates');
       if(moments){
         // Update time in array if set
-        let idx = moments.findIndex((m) => m._d === oldDate._d);
+        let idx = moments.findIndex((m) => this.get('moment').moment(m._d).diff(oldDate._d));        
         if(idx >= 0){
           moments[idx] = newDate;
         }
