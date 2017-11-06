@@ -19,10 +19,11 @@ export default Component.extend({
       let moments = this.get('arrayDates');
       if(moments){
         // Update time in array if set
-        let idx = moments.findIndex((m) => m.diff(newDate, 'minutes'));
-        if(idx >= 0){
-          moments[idx] = newDate;
-        }
+        moments.forEach(function(element, index) {
+          if (element.diff(newDate, 'days') === 0){
+            moments[index] = newDate;  
+          }
+        }, this);
 
         this.set('arrayDates', null);
         this.set('arrayDates', moments);
