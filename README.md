@@ -4,6 +4,7 @@
 
 Ember addon for time edit on date or array of dates in Ember.
 
+After version 0.2.0 set your action to onChangedTime.
 ## Installation
 
 ```ember install ember-cli-time-input```
@@ -12,12 +13,16 @@ Ember addon for time edit on date or array of dates in Ember.
 
 The time-input component use moment "HH:mm" format. (Not yet configurable)
 
-Action is called when the time has been updated. If an array of dates are submitted
+onChangedTime is called when the time has been updated. If an array of dates are submitted
 the array will update the time on the current date assigned.
 
 Usage with only one date:
 
 ```javascript
+  {{time-input currentDate=yourDateTime onChangedTime=(action 'timeUpdated')}}
+```
+For versions before 0.2.0:
+```javascript  
   {{time-input currentDate=yourDateTime action='timeUpdated'}}
 ```
 

@@ -12,7 +12,7 @@ export default Component.extend({
       const parsed = this.get('moment').moment(time, 'HH:mm');
       const oldDate = this.get('moment').moment(this.get('currentDate'));
 
-      var newDate = oldDate ? oldDate.clone() : this.get('moment').moment();
+      let newDate = oldDate ? oldDate.clone() : this.get('moment').moment();
       newDate.hours(parsed.hours());
       newDate.minutes(parsed.minutes());
 
@@ -29,7 +29,7 @@ export default Component.extend({
         this.set('arrayDates', moments);
       }
 
-      this.sendAction('action', newDate);
+      this.get('onChangedTime')(newDate);
     }
   },
 });
