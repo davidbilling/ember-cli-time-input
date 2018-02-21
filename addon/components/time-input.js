@@ -29,7 +29,9 @@ export default Component.extend({
         this.set('arrayDates', moments);
       }
 
-      this.get('onChangedTime')(newDate);
+      if(this.get('onChangedTime')){
+        this.get('onChangedTime')(newDate);
+      }
     }
   },
 });
