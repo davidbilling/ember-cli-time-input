@@ -2,25 +2,27 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import { run }  from '@ember/runloop';
+import { run } from '@ember/runloop';
 import moment from 'moment';
+import { get } from '@ember/object';
+import { set } from '@ember/object';
 
-module('Integration | Component | time input', function(hooks) {
+module('Integration | Component | time input', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('Action called', async function(assert) {
+  test('Action called', async function (assert) {
 
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
 
-    this.set('testDate', moment());
-    this.set('timeUpdated', () => {
+    set(this, 'testDate', moment());
+    set(this, 'timeUpdated', () => {
       const val = this.get('testDate');
-      assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm') );
+      assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm'));
     });
 
     await render(hbs`{{time-input currentDate=testDate onChangedTime=(action timeUpdated)}}`);
-    
+
     run(() => document.getElementById('timeInput').focus());
 
     assert.equal(this.$().text().trim(), '');
@@ -39,9 +41,9 @@ module('Integration | Component | time input', function(hooks) {
 
   //     let arrays = [];
   //     arrays.push(moment('2017-10-26 15:23'));
-  //     this.set('newsuggesteddates', arrays);        
+  //     this.set('newsuggesteddates', arrays);
 
-  //     this.on('timeUpdated', function(val) { 
+  //     this.on('timeUpdated', function(val) {
   //       assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm') );
   //     });
 
