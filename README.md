@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/davidbilling/ember-cli-time-input.svg?branch=master)](https://travis-ci.org/davidbilling/ember-cli-time-input)
+[![Build Status](https://travis-ci.org/davidbilling/ember-cli-time-input.svg?branch=master)](https://travis-ci.org/davidbilling/ember-cli-time-input) [![Greenkeeper badge](https://badges.greenkeeper.io/davidbilling/ember-cli-time-input.svg)](https://greenkeeper.io/)
 
 # ember-cli-time-input
 
