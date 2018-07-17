@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { run } from '@ember/runloop';
 import moment from 'moment';
@@ -25,7 +25,7 @@ module('Integration | Component | time input', function (hooks) {
 
     run(() => document.getElementById('timeInput').focus());
 
-    assert.equal(this.$().text().trim(), '');
+    assert.dom('*').hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -34,7 +34,7 @@ module('Integration | Component | time input', function (hooks) {
       {{/time-input}}
     `);
 
-    assert.equal(this.$().text().trim(), '');
+    assert.dom('*').hasText('');
   });
 
   // test('date array updates', function(assert) {
