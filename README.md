@@ -35,8 +35,6 @@ Usage with array of dates:
 
 The update will occur on the onblur event.
 
-# Contributing
-
 ## Installation
 
 * `git clone` this repository
@@ -52,6 +50,12 @@ The update will occur on the onblur event.
 * `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
+
+## Linting
+
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
 ## Building
 
