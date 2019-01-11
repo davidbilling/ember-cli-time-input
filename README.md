@@ -4,6 +4,12 @@
 
 Ember addon for time edit on date or array of dates in Ember.
 
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
 After version 0.2.0 set your action to onChangedTime.
 ## Installation
 
@@ -62,3 +68,8 @@ The update will occur on the onblur event.
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
