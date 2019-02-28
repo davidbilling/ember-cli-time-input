@@ -69,6 +69,12 @@ The update will occur on the onblur event.
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
 License
 ------------------------------------------------------------------------------
 
