@@ -1,6 +1,6 @@
 <input 
-  type='time' 
-  onblur={{action 'changeTime' value='target.value'}} 
-  value={{moment-format currentDate 'HH:mm' allow-empty=true}} 
-  id='timeInput'
+  type='time' {{on 'blur' (fn this.changeTime this.target.value)}}
+  {{!-- onblur={{action 'changeTime' value='target.value'}}  --}}
+  value={{moment-format @currentDate 'HH:mm' allow-empty=true}}
+  {{!-- id='timeInput' --}}
 >
