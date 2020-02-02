@@ -21,7 +21,7 @@ module('Integration | Component | time-input', function (hooks) {
     await render(hbs`<input type="text" id="other"/>`);  
     await render(hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`);
 
-    assert.dom(this.element).hasText('');
+    assert.equal(this.element.textContent.trim(), '');
 //    run(() => document.getElementById('timeInput').focus());
     // Blur
 //    run(() => document.getElementById('other').focus());
