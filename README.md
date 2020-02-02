@@ -27,6 +27,7 @@ Usage with only one date:
 
 ```javascript
   {{time-input currentDate=yourDateTime onChangedTime=(action 'timeUpdated')}}
+  <TimeInput @currentDate={{this.yourDateTime}} @onChangedTime={{this.timeUpdated}}/>
 ```
 For versions before 0.2.0:
 ```javascript  

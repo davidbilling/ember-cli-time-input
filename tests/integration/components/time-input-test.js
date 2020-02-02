@@ -1,51 +1,30 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
-import { run } from '@ember/runloop';
+import { hbs } from 'ember-cli-htmlbars';
 import moment from 'moment';
-import { get } from '@ember/object';
-import { set } from '@ember/object';
+// import { run } from '@ember/runloop';
 
-module('Integration | Component | time input', function (hooks) {
+module('Integration | Component | time-input', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('Action called', async function (assert) {
+  test('it renders', async function (assert) {
+
+    this.testDate = moment();
+    this.timeUpdated = () => {
+      const val = this.testDate;
+      assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm'));
+    };
 
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
+    // Handle any actions with this.set('myAction', function(val) { ... });
+    await render(hbs`<input type="text" id="other"/>`);  
+    await render(hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`);
 
-    set(this, 'testDate', moment());
-    set(this, 'timeUpdated', () => {
-      const val = get(this, 'testDate');
-      assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm'));
-    });
-
-    await render(hbs`{{time-input currentDate=testDate onChangedTime=(action timeUpdated)}}`);
-
-    run(() => document.getElementById('timeInput').focus());
-
-    // Template block usage:
-    await render(hbs`
-      {{#time-input}}
-        template block text
-      {{/time-input}}
-    `);
+    assert.equal(this.element.textContent.trim(), '');
+//    run(() => document.getElementById('timeInput').focus());
+    // Blur
+//    run(() => document.getElementById('other').focus());
 
   });
-
-  // test('date array updates', function(assert) {
-
-  //     let arrays = [];
-  //     arrays.push(moment('2017-10-26 15:23'));
-  //     this.set('newsuggesteddates', arrays);
-
-  //     this.on('timeUpdated', function(val) {
-  //       assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm') );
-  //     });
-
-  //     this.render(hbs`{{time-input arrayDates=newsuggesteddates action='timeUpdated'}}`);
-
-  //     run(() => document.getElementById('timeInput').focus());
-  //   });
 });

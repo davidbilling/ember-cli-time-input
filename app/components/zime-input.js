@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-time-input/components/zime-input';

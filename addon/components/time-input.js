@@ -1,16 +1,14 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import layout from '../templates/components/time-input';
 import { action } from '@ember/object';
 
 export default class TimeInputComponent extends Component {
-  @layout
   @service moment
   tagName = 'span'
 
   @action
   changeTime(time) {
-    const parsed = this.moment.moment(time, 'HH:mm');
+    const parsed = this.moment.moment(time.target.value, 'HH:mm');
     const oldDate = this.moment.moment(this.currentDate);
 
     let newDate = oldDate ? oldDate.clone() : this.moment.moment();
