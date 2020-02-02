@@ -23,25 +23,25 @@ The time-input component use moment "HH:mm" format. (Not yet configurable)
 onChangedTime is called when the time has been updated. If an array of dates are submitted
 the array will update the time on the current date assigned.
 
+The update will occur on the onblur event.
+
 Usage with only one date:
 
-```javascript
-  {{time-input currentDate=yourDateTime onChangedTime=(action 'timeUpdated')}}
+```hbs
   <TimeInput @currentDate={{this.yourDateTime}} @onChangedTime={{this.timeUpdated}}/>
 ```
+
 For versions before 0.2.0:
-```javascript  
+```hbs
   {{time-input currentDate=yourDateTime action='timeUpdated'}}
 ```
 
 Usage with array of dates:
-```javascript
+```hbs
   {{#each myDateArray as |time|}}
-    {{ember-cli-time-input currentDate=time arrayDates=myDateArray}}
+    <TimeInput @currentDate={{time}} @arrayDates={{this.myDateArray}}/>
   {{/each}}
 ```
-
-The update will occur on the onblur event.
 
 ## Installation
 
