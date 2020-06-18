@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/davidbilling/ember-cli-time-input.svg?branch=master)](https://travis-ci.org/davidbilling/ember-cli-time-input) 
-
 # ember-cli-time-input
 
 Ember addon for time edit on date or array of dates in Ember.
