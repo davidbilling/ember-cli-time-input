@@ -1,10 +1,10 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
 export default class TimeInputComponent extends Component {
-  @service moment
-  tagName = 'span'
+  @service moment;
+  tagName = 'span';
 
   @action
   changeTime(time) {

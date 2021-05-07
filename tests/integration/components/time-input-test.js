@@ -9,22 +9,25 @@ module('Integration | Component | time-input', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-
     this.testDate = moment();
     this.timeUpdated = () => {
       const val = this.testDate;
-      assert.equal(val.format('YYYY-MM-DD HH:mm'), moment().format('YYYY-MM-DD HH:mm'));
+      assert.equal(
+        val.format('YYYY-MM-DD HH:mm'),
+        moment().format('YYYY-MM-DD HH:mm')
+      );
     };
 
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-    await render(hbs`<input type="text" id="other"/>`);  
-    await render(hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`);
+    await render(hbs`<input type="text" id="other"/>`);
+    await render(
+      hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`
+    );
 
     assert.equal(this.element.textContent.trim(), '');
-//    run(() => document.getElementById('timeInput').focus());
+    //    run(() => document.getElementById('timeInput').focus());
     // Blur
-//    run(() => document.getElementById('other').focus());
-
+    //    run(() => document.getElementById('other').focus());
   });
 });

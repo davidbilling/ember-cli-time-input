@@ -1,11 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
 export default class TimeInputComponent extends Component {
-  @service moment
+  @service moment;
 
-  testDate= this.moment.moment();
+  testDate = this.moment.moment();
 
   @action
   timeUpdated(newTime) {

@@ -3,6 +3,6 @@
 module.exports = {
   extends: 'octane',
   rules: {
-    'quotes': 'single'
+    quotes: 'single',
   },
 };
