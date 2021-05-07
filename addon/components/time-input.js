@@ -8,7 +8,7 @@ export default class TimeInputComponent extends Component {
   @action
   changeTime(time) {
     const parsed = this.moment.moment(time.target.value, 'HH:mm');
-    const oldDate = this.moment.moment(this.currentDate);
+    const oldDate = this.moment.moment(this.args.currentDate);
 
     let newDate = oldDate ? oldDate.clone() : this.moment.moment();
     newDate.hours(parsed.hours());
