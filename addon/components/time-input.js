@@ -4,7 +4,6 @@ import { action } from '@ember/object';
 
 export default class TimeInputComponent extends Component {
   @service moment;
-  tagName = 'span';
 
   @action
   changeTime(time) {
@@ -28,8 +27,8 @@ export default class TimeInputComponent extends Component {
       this.arrayDates = moments;
     }
 
-    if (this.onChangedTime) {
-      this.onChangedTime(newDate);
+    if (this.args.onChangedTime) {
+      this.args.onChangedTime(newDate);
     }
   }
 }
