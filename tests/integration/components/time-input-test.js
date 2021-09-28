@@ -20,7 +20,7 @@ module('Integration | Component | time-input', function (hooks) {
 
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-    await render(hbs`<input type="text" id="other"/>`);
+    await render(hbs`<input type='text' id='other'/>`);
     await render(
       hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`
     );

@@ -14,7 +14,7 @@ export default class TimeInputComponent extends Component {
   }
 
   @action
-  SetOldDate(){
-    this.testDate = this.moment.moment("2021-01-02 12:00");
+  SetOldDate() {
+    this.testDate = this.moment.moment('2021-01-02 12:00');
   }
 }
