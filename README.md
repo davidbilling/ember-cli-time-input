@@ -5,9 +5,9 @@ Ember addon for time edit on date or array of dates in Ember.
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v3.16 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
+* Ember.js v3.20 or above
+* Ember CLI v3.20 or above
+* Node.js v12 or above
 
 After version 0.2.0 set your action to onChangedTime.
 ## Installation
