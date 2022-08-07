@@ -2,12 +2,11 @@
 
 Ember addon for time edit on date or array of dates in Ember.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.20 or above
-* Ember CLI v3.20 or above
-* Node.js v12 or above
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v14 or above
 
 After version 0.2.0 set your action to onChangedTime.
 ## Installation
@@ -40,6 +39,27 @@ Usage with array of dates:
     <TimeInput @currentDate={{time}} @arrayDates={{this.myDateArray}}/>
   {{/each}}
 ```
+=======
+## Usage
+>>>>>>> 4e4275e (v3.28.0...v4.6.0)
+
+## Installation
+
+* `git clone` this repository
+* `npm install`
+
+## Running
+
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+
+## Running Tests
+
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `ember test`
+* `ember test --server`
+
+## Linting
 
 ## Installation
 
@@ -69,13 +89,11 @@ Usage with array of dates:
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
