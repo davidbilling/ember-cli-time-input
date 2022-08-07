@@ -61,24 +61,6 @@ Usage with array of dates:
 
 ## Linting
 
-## Installation
-
-* `git clone` this repository
-* `npm install`
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Linting
-
 * `npm run lint:hbs`
 * `npm run lint:js`
 * `npm run lint:js -- --fix`

@@ -8,8 +8,8 @@ import {
 // test setup functions. This way, you can easily extend the setup that is
 // needed per test type.
 
-function setupApplicationTest(hooks, options) {
-  upstreamSetupApplicationTest(hooks, options);
+function mySetupApplicationTest(hooks, options) {
+  setupApplicationTest(hooks, options);
 
   // Additional setup for application tests can be done here.
   //
@@ -27,16 +27,16 @@ function setupApplicationTest(hooks, options) {
   // setupMirage(hooks); // ember-cli-mirage
 }
 
-function setupRenderingTest(hooks, options) {
-  upstreamSetupRenderingTest(hooks, options);
+function mySetupRenderingTest(hooks, options) {
+  setupRenderingTest(hooks, options);
 
   // Additional setup for rendering tests can be done here.
 }
 
-function setupTest(hooks, options) {
-  upstreamSetupTest(hooks, options);
+function mySetupTest(hooks, options) {
+  setupTest(hooks, options);
 
   // Additional setup for unit tests can be done here.
 }
 
-export { setupApplicationTest, setupRenderingTest, setupTest };
+export { mySetupApplicationTest, mySetupRenderingTest, mySetupTest };

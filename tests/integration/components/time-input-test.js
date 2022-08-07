@@ -12,7 +12,8 @@ module('Integration | Component | time-input', function (hooks) {
     this.testDate = moment();
     this.timeUpdated = () => {
       const val = this.testDate;
-      assert.equal(
+
+      assert.expect(
         val.format('YYYY-MM-DD HH:mm'),
         moment().format('YYYY-MM-DD HH:mm')
       );
