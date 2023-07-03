@@ -1,5 +1,3 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
 /dist
 /tmp
@@ -11,7 +9,6 @@
 # misc
 /.env*
 /.pnp*
-/.sass-cache
 /.eslintcache
 /connect.lock
 /coverage/*
