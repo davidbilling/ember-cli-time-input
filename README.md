@@ -39,9 +39,8 @@ Usage with array of dates:
     <TimeInput @currentDate={{time}} @arrayDates={{this.myDateArray}}/>
   {{/each}}
 ```
-=======
+
 ## Usage
->>>>>>> 4e4275e (v3.28.0...v4.6.0)
 
 ## Installation
 

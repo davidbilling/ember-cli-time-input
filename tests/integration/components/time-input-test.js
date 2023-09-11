@@ -13,9 +13,9 @@ module('Integration | Component | time-input', function (hooks) {
     this.timeUpdated = () => {
       const val = this.testDate;
 
-      assert.expect(
+      assert.strictEqual(
         val.format('YYYY-MM-DD HH:mm'),
-        moment().format('YYYY-MM-DD HH:mm')
+        moment().format('YYYY-MM-DD HH:mm'),
       );
     };
 
@@ -23,7 +23,7 @@ module('Integration | Component | time-input', function (hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
     await render(hbs`<input type='text' id='other'/>`);
     await render(
-      hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`
+      hbs`<TimeInput @currentDate={{this.testDate}} @onChangedTime={{this.timeUpdated}}/>`,
     );
 
     assert.dom(this.element).hasText('');
