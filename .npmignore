@@ -1,6 +1,6 @@
 # compiled output
-/dist
-/tmp
+/dist/
+/tmp/
 
 # misc
 /.editorconfig
@@ -20,13 +20,13 @@
 /.travis.yml
 /.watchmanconfig
 /CONTRIBUTING.md
-ember-cli-build.js
-testem.js
-/tests
+/ember-cli-build.js
+/testem.js
+/tests/
+/yarn-error.log
 /yarn.lock
-**/.gitkeep
+.gitkeep
 /.git
-
 # ember-try
 /.node_modules.ember-try/
 /npm-shrinkwrap.json.ember-try
