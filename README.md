@@ -1,17 +1,18 @@
 # ember-cli-time-input
 
-Ember addon for time edit on date or array of dates in Ember.
+[Short description of the addon.]
 
 ## Compatibility
 
-* Ember.js v4.8 or above
-* Ember CLI v4.8 or above
-* Node.js v18 or above
+- Ember.js v4.12 or above
+- Ember CLI v4.12 or above
+- Node.js v18 or above
 
-After version 0.2.0 set your action to onChangedTime.
 ## Installation
 
-```ember install ember-cli-time-input```
+```
+ember install ember-cli-time-input
+```
 
 ## Usage
 
@@ -26,11 +27,6 @@ Usage with only one date:
 
 ```hbs
   <TimeInput @currentDate={{this.yourDateTime}} @onChangedTime={{this.timeUpdated}}/>
-```
-
-For versions before 0.2.0:
-```hbs
-  {{time-input currentDate=yourDateTime action='timeUpdated'}}
 ```
 
 Usage with array of dates:
@@ -73,7 +69,6 @@ For more information on using ember-cli, visit [https://ember-cli.com/](https://
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
-
 
 ## License
 
