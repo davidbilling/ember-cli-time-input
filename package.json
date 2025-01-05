@@ -82,6 +82,9 @@
     "stylelint-prettier": "^5.0.2",
     "webpack": "^5.97.1"
   },
+  "overrides": {
+    "braces": "3.0.3"
+  },
   "peerDependencies": {
     "ember-source": ">= 4.0.0"
   },
