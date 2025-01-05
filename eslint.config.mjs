@@ -65,6 +65,7 @@ export default [
       parserOptions: esmParserOptions,
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
   },
