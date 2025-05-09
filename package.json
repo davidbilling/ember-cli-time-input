@@ -85,7 +85,9 @@
     "webpack": "^5.99.7"
   },
   "overrides": {
-    "braces": "3.0.3"
+    "braces": "^3.0.3",
+    "@babel/runtime": "^7.26.10",
+    "got": "^11.8.5"
   },
   "peerDependencies": {
     "ember-source": ">= 4.0.0"
