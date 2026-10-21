@@ -1,3 +1,5 @@
+# This repository is not maintained any more!
+
 # ember-cli-time-input
 
 [Short description of the addon.]
